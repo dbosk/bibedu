@@ -1,6 +1,9 @@
 BIBEDU_BIB+=learning.bib
 BIBEDU_STY+=learning.sty
 
+BIBEDU_BIB+=assessment.bib
+BIBEDU_STY+=assessment.sty
+
 INCLUDE_BIBEDU?=.
 
 ${BIBEDU_BIB} ${BIBEDU_STY}:
