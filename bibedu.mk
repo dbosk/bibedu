@@ -9,8 +9,8 @@ INCLUDE_BIBEDU?=.
 ${BIBEDU_BIB} ${BIBEDU_STY}:
 	[ -e "./$@" ] || ln -s ${INCLUDE_BIBEDU}/$@ ./$@
 
-.PHONY: clean-depends
-clean-depends: clean-bibedu
+.PHONY: clean-depends distclean
+clean-depends distclean: clean-bibedu
 clean-bibedu:
 	find ${BIBEDU_BIB} ${BIBEDU_STY} -type l | xargs ${RM}
 
