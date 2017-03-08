@@ -12,15 +12,21 @@ Areas
 We cover the following areas:
 
  - *learning*: these files cover learning theories.
+ - *assessment*: these files cover assessment in education.
+ - *didactics*: these files cover didactics.
 
 
 Usage
 ===============================================================================
 
-The intended usage is to add this repo as a git submodule to a project. Then 
-the project `Makefile` should include `bibedu.mk`.
+The intended usage is to add this repo as a Git submodule to a project. Then 
+the project `Makefile` should include `bibedu.mk`, then the .bib and .sty files 
+can be added as dependencies and they will automatically be symlinked. For 
+example:
 
-bibedu.mk
-learning.bib
-learning.mk
-learning.sty
+```Makefile
+paper.pdf: paper.tex learning.bib learning.sty
+
+INCLUDE_BIBEDU=./bibedu
+include ${INCLUDE_BIBEDU}/bibedu.mk
+```
