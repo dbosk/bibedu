@@ -15,6 +15,8 @@ clean-bibedu:
 	find ${BIBEDU_BIB} ${BIBEDU_STY} -type l | xargs ${RM}
 
 include ${INCLUDE_BIBEDU}/learning.mk
+include ${INCLUDE_BIBEDU}/assessment.mk
+include ${INCLUDE_BIBEDU}/didactics.mk
 
 define bibedu_display
 .PHONY: $(1)
