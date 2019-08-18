@@ -1,0 +1,202 @@
+\documentclass[a4paper]{article}
+\usepackage{noweb}
+% Needed to relax penalty for breaking code chunks across pages, otherwise 
+% there might be a lot of space following a code chunk.
+\def\nwendcode{\endtrivlist \endgroup}
+\let\nwdocspar=\smallbreak
+
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{authblk}
+
+\usepackage{bibedu}
+
+
+\title{%
+  BibEdu: Bibliographies and acronyms library in Education
+}
+\author{%
+  Daniel Bosk
+}
+\affil{%
+  KTH EECS
+  and
+  MIUN IST
+}
+
+\begin{document}
+\maketitle
+
+%\begin{abstract}
+%  \input{abstract.tex}
+%\end{abstract}
+%\clearpage
+
+\tableofcontents
+\clearpage
+
+@
+\section{Introduction}
+
+This is the documentation of the [[bibedu]] bibliography and acronyms library.
+It consists of three parts:
+[[<<bibedu.bib>>]] which is a bibliography,
+[[<<bibedu.sty>>]] which contains acronym definitions and other useful LaTeX 
+tools, and
+[[<<bibedu.mk>>]] which is a make include file to use with makefiles.
+
+The [[<<bibedu.sty>>]] package depends on the [[acro]] package and [[biblatex]], 
+it also automatically includes the bibliography for use with BibLaTeX.
+<<bibedu.sty>>=
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{bibedu}[2019/08/18 v0.2 Bibliography and Library for Education]
+\RequirePackage{biblatex}
+\addbibresource{bibedu.bib}
+\RequirePackage{acro}
+@
+
+The [[<<bibedu.mk>>]] include file does two things.
+It provides the functionality that [[make citekey]] will open the given 
+reference.
+It also provides easy inclusion of the [[bibedu]] repository in other projects 
+without installation in the TeX directory hierarchy.
+<<bibedu.mk>>=
+BIBEDU_FILES+=bibedu.bib
+BIBEDU_FILES+=bibedu.sty
+
+INCLUDE_BIBEDU?=.
+
+<<link local copies to repo>>
+<<clean up bibedu>>
+<<open references for display>>
+@
+
+To use a file, TeX needs the file to be either in its directory hierarchy, or 
+the local directory.
+We will create a link in the local directory into the repo.
+<<link local copies to repo>>=
+${BIBEDU_FILES}:
+	[ -e "./$@" ] || ln -s ${INCLUDE_BIBEDU}/$@ ./$@
+@
+
+When cleaning, we want to remove these links.
+<<clean up bibedu>>=
+.PHONY: clean-depends distclean
+clean-depends distclean: clean-bibedu
+clean-bibedu:
+	find ${BIBEDU_FILES} -type l | xargs ${RM}
+@
+
+For documentation, we want to create targets for make that can open a URL to 
+the reference.
+We define every citation key in the space-separated list [[BIBEDU_REFKEY]].
+Then we let the variable [[URL-<citekey>]] contain a URL to the reference.
+<<open references for display>>=
+define bibedu_display
+.PHONY: $(1)
+$(1):
+	xdg-open ${URL-$(1)}
+endef
+
+$(foreach ref,${BIBEDU_REFKEY},$(eval $(call bibedu_display,${ref})))
+@
+
+
+\section{Learning theory}
+
+\Textcite{Vygotsky} developed the socio-cultural theory.
+<<bibedu.bib>>=
+@book{Vygotsky,
+  title={Mind in society: The development of higher psychological processes},
+  author={Vygotsky, Lev Semenovich},
+  year={1980},
+  publisher={Harvard university press},
+}
+@ A version of the book can be found online:
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=Vygotsky
+URL-Vygotsky=https://books.google.fr/books?id=Irq913lEZ1QC&lpg=PR13&ots=H9HoD5Gloa&dq=vygotsky&lr&pg=PP1\#v=onepage&q=vygotsky&f=false
+@
+
+One key term is \ac{ZPD}.
+<<bibedu.sty>>=
+\DeclareAcronym{ZPD}{%
+  short = {ZPD},
+  long = {zone of proximal development},
+  cite = {Vygotsky},
+}
+@
+
+
+\section{Didactics}
+
+\Textcite{Moura2011teachingCS} studied the impact of \enquote{deductive} and 
+\enquote{inductive} teaching approaches.
+<<bibedu.bib>>=
+@article{Moura2011teachingCS,
+  title = "Teaching a \{CS\} introductory course: An active approach ",
+  journal = "Computers \& Education ",
+  volume = "56",
+  number = "2",
+  pages = "475 - 483",
+  year = "2011",
+  note = "",
+  issn = "0360-1315",
+  doi = "http://dx.doi.org/10.1016/j.compedu.2010.09.009",
+  url = "http://www.sciencedirect.com/science/article/pii/S0360131510002617",
+  author = "Isabel C. Moura and Natascha van Hattum-Janssen",
+  keywords = "Teaching/learning strategies",
+  keywords = "Country-specific developments",
+  keywords = "Cooperative/collaborative learning",
+  keywords = "Programming and programming languages",
+  keywords = "Improving classroom teaching ",
+  abstract = "Computer Science (CS) introductory courses that are offered by the Department of Information Systems at the University of Minho (UM), Portugal, seem to abound in non-motivated students. They are characterized by high failure and withdrawal rates and use mainly deductive teaching approaches. Deductive instruction begins with theories and progresses to applications of those theories. Active approaches to teaching are more inductive. Inductive instruction begins with the presentation of, for instance, a specific problem that introduces a topic, and theories are studied on a need-to-know basis. This pilot study describes how active learning techniques have been successfully applied to a \{CS\} introductory course, reducing its failure and withdrawal rates. The study portrays the changes in the course from teacher-centered education to a learner-centered approach, using two different editions of the same course, the first one being teacher-centered and the second learner-centered. The results in terms of success, failure, and dropout are given and the impact of a more student-centered approach on student involvement in learning is analyzed. The authors discuss implications of student-centered learning for the classroom and pay attention to some of the drawbacks of an implementation more focused on active learning. "
+}
+@ The paper can be found online:
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=Moura2011teachingCS
+URL-Moura2011teachingCS=http://www.sciencedirect.com/science/article/pii/S0360131510002617
+@
+
+
+\section{Assessment}
+
+One book that has had big impact on teaching in higher education is that by 
+\textcite{BiggsTeachingForQualityLearning}.
+<<bibedu.bib>>=
+@book{BiggsTeachingForQualityLearning,
+  author={Biggs, John B. and Tang, Catherine So-Kum},
+  title={Teaching for quality learning at university : what the student does},
+  publisher={Open University Press},
+  address={Maidenhead},
+  year={2011},
+  edition={4},
+  ISBN={9780335242757 (pbk.)},
+  keywords={Universitetsundervisning Pedagogisk metodik Studieteknik -- 
+    h{\"o}gskolan},
+}
+@ There is a PDF copy available.
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=BiggsTeachingForQualityLearning
+URL-BiggsTeachingForQualityLearning=https://www.umweltbildung-noe.at/upload/files/OEKOLOG%202014/2_49657968-Teaching-for-Quality-Learning-at-University.pdf
+@
+
+The core term when it comes to assessment is \ac{ILO}.
+<<bibedu.sty>>=
+\DeclareAcronym{ILO}{%
+  short = {ILO},
+  short-indefinite = {an},
+  long = {intended learning outcome},
+  long-indefinite = {an},
+}
+@
+
+
+
+\printbibliography{}
+
+
+\section{An index of the code blocks}
+\nowebchunks
+
+\end{document}
