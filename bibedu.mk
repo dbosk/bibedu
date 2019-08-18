@@ -1,8 +1,5 @@
-BIBEDU_BIB+=learning.bib
-BIBEDU_STY+=learning.sty
-
-BIBEDU_BIB+=assessment.bib
-BIBEDU_STY+=assessment.sty
+BIBEDU_BIB+=bibedu.bib
+BIBEDU_STY+=bibedu.sty
 
 INCLUDE_BIBEDU?=.
 
@@ -13,13 +10,6 @@ ${BIBEDU_BIB} ${BIBEDU_STY}:
 clean-depends distclean: clean-bibedu
 clean-bibedu:
 	find ${BIBEDU_BIB} ${BIBEDU_STY} -type l | xargs ${RM}
-
-
-INCLUDE_BIBEDU?=.
-include ${INCLUDE_BIBEDU}/learning.mk
-include ${INCLUDE_BIBEDU}/assessment.mk
-include ${INCLUDE_BIBEDU}/didactics.mk
-
 
 define bibedu_display
 .PHONY: $(1)
