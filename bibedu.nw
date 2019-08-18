@@ -77,7 +77,10 @@ We will create a link in the local directory into the repo.
 <<link local copies to repo>>=
 ${BIBEDU_FILES}:
 	[ -e "./$@" ] || ln -s ${INCLUDE_BIBEDU}/$@ ./$@
-@
+
+bibedu.sty: bibedu.bib
+@ We add the last line since the package file automatically loads the 
+bibliography, thus the bibliography is required if the package is used.
 
 When cleaning, we want to remove these links.
 <<clean up bibedu>>=
