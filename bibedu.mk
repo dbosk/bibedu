@@ -5,6 +5,8 @@ INCLUDE_BIBEDU?=.
 
 ${BIBEDU_FILES}:
 	[ -e "./$@" ] || ln -s ${INCLUDE_BIBEDU}/$@ ./$@
+
+bibedu.sty: bibedu.bib
 .PHONY: clean-depends distclean
 clean-depends distclean: clean-bibedu
 clean-bibedu:
