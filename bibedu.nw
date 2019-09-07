@@ -54,6 +54,16 @@ it also automatically includes the bibliography for use with BibLaTeX.
 \RequirePackage{biblatex}
 \addbibresource{bibedu.bib}
 \RequirePackage{acrox}
+@ Now we can add acronyms and other code by adding it to [[<<bibedu.sty>>]].
+<<bibedu.sty>>=
+\DeclareAcronym{CS}{
+  short = {CS},
+  long = {computer science},
+}
+\DeclareAcronym{CSE}{
+  short = {CSE},
+  long = {\acifused{CS}{\acs*{CS}}{\acl*{CS}} education}
+}
 @
 
 The [[<<bibedu.mk>>]] include file does two things.

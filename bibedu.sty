@@ -3,6 +3,14 @@
 \RequirePackage{biblatex}
 \addbibresource{bibedu.bib}
 \RequirePackage{acrox}
+\DeclareAcronym{CS}{
+  short = {CS},
+  long = {computer science},
+}
+\DeclareAcronym{CSE}{
+  short = {CSE},
+  long = {\acifused{CS}{\acs*{CS}}{\acl*{CS}} education}
+}
 \DeclareAcronym{ZPD}{%
   short = {ZPD},
   long = {zone of proximal development},
