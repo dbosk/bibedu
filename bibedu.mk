@@ -24,6 +24,8 @@ BIBEDU_REFKEY+=Piaget
 URL-Piaget=http://libris.kb.se/bib/10960369
 BIBEDU_REFKEY+=Skinner
 URL-Skinner=http://libris.kb.se/bib/10207516
+BIBEDU_REFKEY+=LearningAndAwareness
+URL-LearningAndAwareness=http://libris.kb.se/bib/8310448
 BIBEDU_REFKEY+=BoskFormalizingMathsThesis
 URL-BoskFormalizingMathsThesis=http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-91398
 BIBEDU_REFKEY+=Moura2011teachingCS

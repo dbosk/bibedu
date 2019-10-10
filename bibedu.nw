@@ -180,6 +180,23 @@ BIBEDU_REFKEY+=Skinner
 URL-Skinner=http://libris.kb.se/bib/10207516
 @
 
+\Textcite{VariationTheory} laid developed the variation theory of learning.
+<<bibedu.bib>>=
+@book{LearningAndAwareness,
+  author={Marton, Ference and Booth, Shirley},
+  title={Learning and awareness},
+  publisher={Erlbaum},
+  address={Mahwah, N.J.},
+  year={1997},
+  ISBN={0805824545},
+  keywords={Medvetandet Inl{\"a}rning},
+}
+@ We have only a reference to the library.
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=LearningAndAwareness
+URL-LearningAndAwareness=http://libris.kb.se/bib/8310448
+@
+
 
 \section{Didactics}
 
