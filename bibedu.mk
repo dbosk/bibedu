@@ -26,6 +26,8 @@ BIBEDU_REFKEY+=Skinner
 URL-Skinner=http://libris.kb.se/bib/10207516
 BIBEDU_REFKEY+=LearningAndAwareness
 URL-LearningAndAwareness=http://libris.kb.se/bib/8310448
+BIBEDU_REFKEY+=VariationPossibleToLearn
+URL-VariationPossibleToLearn=https://link.springer.com/article/10.1007/s11858-017-0858-4
 BIBEDU_REFKEY+=BoskFormalizingMathsThesis
 URL-BoskFormalizingMathsThesis=http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-91398
 BIBEDU_REFKEY+=Moura2011teachingCS

@@ -198,6 +198,27 @@ BIBEDU_REFKEY+=LearningAndAwareness
 URL-LearningAndAwareness=http://libris.kb.se/bib/8310448
 @
 
+\Textcite{VariationPossibleToLearn} proposed to use variation theory to analyze 
+teaching material to see what is possible to learn, and consequently 
+systematically evaluate what is \emph{not} possible to learn.
+<<bibedu.bib>>=
+@article{VariationPossibleToLearn,
+  title={What is made possible to learn when using the variation theory of learning in teaching mathematics?},
+  author={Kullberg, Angelika and Kempe, Ulla Runesson and Marton, Ference},
+  journal={ZDM},
+  volume={49},
+  number={4},
+  pages={559--569},
+  year={2017},
+  publisher={Springer},
+  URL={https://link.springer.com/article/10.1007/s11858-017-0858-4},
+}
+@ We provide the link through the makefile.
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=VariationPossibleToLearn
+URL-VariationPossibleToLearn=https://link.springer.com/article/10.1007/s11858-017-0858-4
+@
+
 
 \section{Didactics}
 
