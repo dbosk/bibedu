@@ -33,6 +33,10 @@ BIBEDU_REFKEY+=MeasuringActualOrFeelingOfLearning
 URL-MeasuringActualOrFeelingOfLearning=https://www.pnas.org/content/116/39/19251.short
 BIBEDU_REFKEY+=DevelopmentResearch
 URL-DevelopmentResearch=https://doi.org/10.1007/978-94-011-4255-7_1
+BIBEDU_REFKEY+=ActionResearch
+URL-ActionResearch=https://doi.org/10.1007/978-1-4419-1428-6_488
+BIBEDU_REFKEY+=DesignBasedResearch
+URL-DesignBasedResearch=https://doi.org/10.3102/0013189X11428813
 
 define bibedu_display
 .PHONY: $(1)
