@@ -29,6 +29,10 @@ BIBEDU_REFKEY+=BiggsTeachingForQualityLearning
 URL-BiggsTeachingForQualityLearning=https://www.umweltbildung-noe.at/upload/files/OEKOLOG%202014/2_49657968-Teaching-for-Quality-Learning-at-University.pdf
 BIBEDU_REFKEY+=DisciplineAndPunish
 URL-DisciplineAndPunish=http://libris.kb.se/bib/9344452
+BIBEDU_REFKEY+=MeasuringActualOrFeelingOfLearning
+URL-MeasuringActualOrFeelingOfLearning=https://www.pnas.org/content/116/39/19251.short
+BIBEDU_REFKEY+=DevelopmentResearch
+URL-DevelopmentResearch=https://doi.org/10.1007/978-94-011-4255-7_1
 
 define bibedu_display
 .PHONY: $(1)

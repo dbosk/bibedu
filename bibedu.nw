@@ -10,6 +10,8 @@
 \usepackage{hyperref}
 \usepackage{authblk}
 
+\usepackage{csquotes}
+
 \usepackage{bibedu}
 
 
@@ -350,11 +352,76 @@ affect individual behaviour.
   keywords={F{\"a}ngelser -- historia Straff -- historia},
 }
 @ We provide a reference to the library.
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=DisciplineAndPunish
 URL-DisciplineAndPunish=http://libris.kb.se/bib/9344452
 @
 
+
+\section{Research methods}
+
+\Textcite{MeasuringActualOrFeelingOfLearning} evaluates students' feeling of 
+learning and actual learning to compare traditional and active learning.
+The students prefer traditional lectures over active learning and think they 
+learn best using traditional lectures.
+However, they actually learn better with active learning, but still they prefer 
+traditional lectures.
+
+The bibliographic entry:
+<<bibedu.bib>>=
+@article{MeasuringActualOrFeelingOfLearning,
+  title={Measuring actual learning versus feeling of learning in response to 
+    being actively engaged in the classroom},
+  author={Deslauriers, Louis and McCarty, Logan S and Miller, Kelly and 
+    Callaghan, Kristina and Kestin, Greg},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={116},
+  number={39},
+  pages={19251--19257},
+  year={2019},
+  publisher={National Acad Sciences}
+}
+@ And the URL to the publisher's page for the article:
+<<refkeys>>=
+BIBEDU_REFKEY+=MeasuringActualOrFeelingOfLearning
+URL-MeasuringActualOrFeelingOfLearning=https://www.pnas.org/content/116/39/19251.short
+@
+
+\Textcite{DevelopmentResearch} writes in their abstract:
+\blockcquote{DevelopmentResearch}{%
+  This chapter discusses the role of research in relation to educational design 
+  and development activities. The first part of the chapter focuses on the 
+  rationale and basic principles of development research by outlining motives 
+  for conducting formative research, analyzing definitions and aims of various 
+    types of development research, and discussing several of its key 
+    characteristics. The second part of the chapter deals with methods of 
+    development research, exploring some of its typical problems and dilemmas, 
+    and discussing several challenges for further action and reflection.%
+}
+
+The bibliographic entry:
+<<bibedu.bib>>=
+@Inbook{DevelopmentResearch,
+  author="van den Akker, Jan",
+  editor="van den Akker, Jan
+      and Branch, Robert Maribe
+      and Gustafson, Kent
+      and Nieveen, Nienke
+      and Plomp, Tjeerd",
+  title="Principles and Methods of Development Research",
+  bookTitle="Design Approaches and Tools in Education and Training",
+  year="1999",
+  publisher="Springer Netherlands",
+  address="Dordrecht",
+  pages="1--14",
+  isbn="978-94-011-4255-7",
+  doi="10.1007/978-94-011-4255-7_1",
+}
+@ And the URL:
+<<refkeys>>=
+BIBEDU_REFKEY+=DevelopmentResearch
+URL-DevelopmentResearch=https://doi.org/10.1007/978-94-011-4255-7_1
+@
 
 \printbibliography{}
 
