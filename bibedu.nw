@@ -105,7 +105,11 @@ For documentation, we want to create targets for make that can open a URL to
 the reference.
 We define every citation key in the space-separated list [[BIBEDU_REFKEY]].
 Then we let the variable [[URL-<citekey>]] contain a URL to the reference.
+These variables must be defined before they are used, so we add them in the 
+code block [[<<refkeys>>]].
 <<open references for display>>=
+<<refkeys>>
+
 define bibedu_display
 .PHONY: $(1)
 $(1):
@@ -127,7 +131,7 @@ $(foreach ref,${BIBEDU_REFKEY},$(eval $(call bibedu_display,${ref})))
   publisher={Harvard university press},
 }
 @ A version of the book can be found online:
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=Vygotsky
 URL-Vygotsky=https://books.google.fr/books?id=Irq913lEZ1QC&lpg=PR13&ots=H9HoD5Gloa&dq=vygotsky&lr&pg=PP1\#v=onepage&q=vygotsky&f=false
 @
@@ -156,7 +160,7 @@ theory of cognitive development.
   keywords={Barnpsykologi Kognition},
 }
 @ The book is not available, but we provide a reference to the library.
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=Piaget
 URL-Piaget=http://libris.kb.se/bib/10960369
 @
@@ -175,7 +179,7 @@ URL-Piaget=http://libris.kb.se/bib/10960369
   note={Translated by Ness{\'e}n, Barbro},
 }
 @ We leave a reference to the library.
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=Skinner
 URL-Skinner=http://libris.kb.se/bib/10207516
 @
@@ -193,7 +197,7 @@ learning.
   keywords={Medvetandet Inl{\"a}rning},
 }
 @ We have only a reference to the library.
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=LearningAndAwareness
 URL-LearningAndAwareness=http://libris.kb.se/bib/8310448
 @
@@ -214,7 +218,7 @@ systematically evaluate what is \emph{not} possible to learn.
   URL={https://link.springer.com/article/10.1007/s11858-017-0858-4},
 }
 @ We provide the link through the makefile.
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=VariationPossibleToLearn
 URL-VariationPossibleToLearn=https://link.springer.com/article/10.1007/s11858-017-0858-4
 @
@@ -262,7 +266,7 @@ author = {Bosk, Daniel},
   year = {2011}
 }
 @ We provide a link to the thesis.
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=BoskFormalizingMathsThesis
 URL-BoskFormalizingMathsThesis=http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-91398
 @
@@ -290,7 +294,7 @@ URL-BoskFormalizingMathsThesis=http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-
   abstract = "Computer Science (CS) introductory courses that are offered by the Department of Information Systems at the University of Minho (UM), Portugal, seem to abound in non-motivated students. They are characterized by high failure and withdrawal rates and use mainly deductive teaching approaches. Deductive instruction begins with theories and progresses to applications of those theories. Active approaches to teaching are more inductive. Inductive instruction begins with the presentation of, for instance, a specific problem that introduces a topic, and theories are studied on a need-to-know basis. This pilot study describes how active learning techniques have been successfully applied to a \{CS\} introductory course, reducing its failure and withdrawal rates. The study portrays the changes in the course from teacher-centered education to a learner-centered approach, using two different editions of the same course, the first one being teacher-centered and the second learner-centered. The results in terms of success, failure, and dropout are given and the impact of a more student-centered approach on student involvement in learning is analyzed. The authors discuss implications of student-centered learning for the classroom and pay attention to some of the drawbacks of an implementation more focused on active learning. "
 }
 @ The paper can be found online:
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=Moura2011teachingCS
 URL-Moura2011teachingCS=http://www.sciencedirect.com/science/article/pii/S0360131510002617
 @
@@ -313,7 +317,7 @@ One book that has had big impact on teaching in higher education is that by
     h{\"o}gskolan},
 }
 @ There is a PDF copy available.
-<<bibedu.mk>>=
+<<refkeys>>=
 BIBEDU_REFKEY+=BiggsTeachingForQualityLearning
 URL-BiggsTeachingForQualityLearning=https://www.umweltbildung-noe.at/upload/files/OEKOLOG%202014/2_49657968-Teaching-for-Quality-Learning-at-University.pdf
 @
