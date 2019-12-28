@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{report}
 \usepackage{noweb}
 % Needed to relax penalty for breaking code chunks across pages, otherwise 
 % there might be a lot of space following a code chunk.
@@ -6,6 +6,7 @@
 \let\nwdocspar=\smallbreak
 
 \usepackage[utf8]{inputenc}
+\usepackage[swedish,british]{babel}
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
 \usepackage{authblk}
@@ -37,7 +38,7 @@
 \clearpage
 
 @
-\section{Introduction}
+\chapter{Introduction}
 
 This is the documentation of the [[bibedu]] bibliography and acronyms library.
 It consists of three parts:
@@ -106,7 +107,7 @@ $(foreach ref,${BIBEDU_REFKEY},$(eval $(call bibedu_display,${ref})))
 @
 
 
-\section{Learning theory}
+\chapter{Learning theory}
 
 \Textcite{Vygotsky} developed the socio-cultural theory.
 <<bibedu.bib>>=
@@ -171,7 +172,7 @@ URL-Skinner=http://libris.kb.se/bib/10207516
 @
 
 
-\section{Didactics}
+\chapter{Didactics}
 
 \Textcite{BoskFormalizingMathsThesis} implemented the new (2011) Swedish 
 curriculum of mathematics as formal mathematics, then studied a class of 
@@ -247,7 +248,7 @@ URL-Moura2011teachingCS=http://www.sciencedirect.com/science/article/pii/S036013
 @
 
 
-\section{Assessment}
+\chapter{Assessment}
 
 One book that has had big impact on teaching in higher education is that by 
 \textcite{BiggsTeachingForQualityLearning}.
@@ -280,7 +281,7 @@ The core term when it comes to assessment is \ac{ILO}.
 @
 
 
-\section{Culture, normalization and the individual}
+\chapter{Culture, normalization and the individual}
 
 \Textcite{DisciplineAndPunish} studied how culture and social pressure can 
 affect individual behaviour.
@@ -303,10 +304,6 @@ URL-DisciplineAndPunish=http://libris.kb.se/bib/9344452
 @
 
 
-\printbibliography{}
 
-
-\section{An index of the code blocks}
-\nowebchunks
-
+\printbibliography
 \end{document}
