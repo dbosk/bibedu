@@ -3,14 +3,14 @@ all: bibedu.bib bibedu.sty bibedu.mk
 
 bibedu.bib bibedu.sty bibedu.mk: bibedu.nw
 
-%.bib: %.nw
-	${NOTANGLE.sty}
+NOWEB_SUFFIXES+= .bib
 
 
 .PHONY: all
 all: bibedu.pdf
 
-bibedu.pdf: bibedu.nw bibedu.sty bibedu.bib
+bibedu.pdf: bibedu.tex bibedu.sty bibedu.bib
+bibedu.pdf: necessary-conditions.tex
 
 
 .PHONY: clean
