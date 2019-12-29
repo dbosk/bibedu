@@ -1,0 +1,20 @@
+\section{Necessary conditions of learning}
+
+\Textcite{NecessaryConditionsOfLearning} summarizes the theory culminating from 
+his life's work in \citetitle{NecessaryConditionsOfLearning}.
+<<bibedu.bib>>=
+@book{NecessaryConditionsOfLearning,
+  author={Marton, Ference},
+  title={Necessary conditions of learning},
+  publisher={Routledge},
+  address={London},
+  year={2015},
+  ISBN={9780415739139},
+  keywords={Fenomenologisk psykologi Inl{\"a}rning -- psykologiska aspekter},
+}
+@
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=NecessaryConditionsOfLearning
+URL=NecessaryConditionsOfLearning=http://libris.kb.se/bib/16950937
+@
+

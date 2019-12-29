@@ -172,6 +172,9 @@ URL-Skinner=http://libris.kb.se/bib/10207516
 @
 
 
+\input{necessary-conditions.tex}
+
+
 \chapter{Didactics}
 
 \Textcite{BoskFormalizingMathsThesis} implemented the new (2011) Swedish 
