@@ -523,6 +523,17 @@ BIBEDU_REFKEY+=DesignBasedResearch
 URL-DesignBasedResearch=https://doi.org/10.3102/0013189X11428813
 @
 
+\Ac{LA} is a core tool in \ac{TEL}.
+<<bibedu.sty>>=
+\DeclareAcronym{LA}{%
+  short = LA,
+  long = learning analytics,
+}
+\DeclareAcronym{TEL}{%
+  short = TEL,
+  long = technology-enhanced learning,
+}
+@
 
 \printbibliography
 \end{document}
