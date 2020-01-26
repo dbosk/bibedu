@@ -11,6 +11,9 @@
 \usepackage{hyperref}
 \usepackage{authblk}
 
+\usepackage{csquotes}
+\usepackage[all]{foreign}
+
 \usepackage{bibedu}
 
 
@@ -54,7 +57,17 @@ it also automatically includes the bibliography for use with BibLaTeX.
 \ProvidesPackage{bibedu}[2019/08/18 v0.2 Bibliography and Library for Education]
 \RequirePackage{biblatex}
 \addbibresource{bibedu.bib}
-\RequirePackage{acro}
+\RequirePackage{acrox}
+@ Now we can add acronyms and other code by adding it to [[<<bibedu.sty>>]].
+<<bibedu.sty>>=
+\DeclareAcronym{CS}{
+  short = {CS},
+  long = {computer science},
+}
+\DeclareAcronym{CSE}{
+  short = {CSE},
+  long = {\acifused{CS}{\acs*{CS}}{\acl*{CS}} education}
+}
 @
 
 The [[<<bibedu.mk>>]] include file does two things.
@@ -191,6 +204,46 @@ BIBEDU_REFKEY+=Skinner
 URL-Skinner=http://libris.kb.se/bib/10207516
 @
 
+\Textcite{LearningAndAwareness} laid developed the variation theory of 
+learning.
+<<bibedu.bib>>=
+@book{LearningAndAwareness,
+  author={Marton, Ference and Booth, Shirley},
+  title={Learning and awareness},
+  publisher={Erlbaum},
+  address={Mahwah, N.J.},
+  year={1997},
+  ISBN={0805824545},
+  keywords={Medvetandet Inl{\"a}rning},
+}
+@ We have only a reference to the library.
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=LearningAndAwareness
+URL-LearningAndAwareness=http://libris.kb.se/bib/8310448
+@
+
+\Textcite{VariationPossibleToLearn} proposed to use variation theory to 
+nalyze +teaching material to see what is possible to learn, and consequently 
+systematically evaluate what is \emph{not} possible to learn.
+<<bibedu.bib>>=
+@article{VariationPossibleToLearn,
+  title={What is made possible to learn when using the variation theory of 
+earning in teaching mathematics?},
+  author={Kullberg, Angelika and Kempe, Ulla Runesson and Marton, Ference},
+  journal={ZDM},
+  volume={49},
+  number={4},
+  pages={559--569},
+  year={2017},
+  publisher={Springer},
+  URL={https://link.springer.com/article/10.1007/s11858-017-0858-4},
+}
+@ We provide the link through the makefile.
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=VariationPossibleToLearn
+URL-VariationPossibleToLearn=https://link.springer.com/article/10.1007/s11858-017-0858-4
+@
+
 
 \chapter{Didactics}
 
@@ -323,6 +376,145 @@ BIBEDU_REFKEY+=DisciplineAndPunish
 URL-DisciplineAndPunish=http://libris.kb.se/bib/9344452
 @
 
+
+\chapter{Research methodology}
+
+\Textcite{MeasuringActualOrFeelingOfLearning} evaluates students' feeling of 
+learning and actual learning to compare traditional and active learning.
+The students prefer traditional lectures over active learning and think they 
+learn best using traditional lectures.
+However, they actually learn better with active learning, but still they prefer 
+traditional lectures.
+
+The bibliographic entry:
+<<bibedu.bib>>=
+@article{MeasuringActualOrFeelingOfLearning,
+  title={Measuring actual learning versus feeling of learning in response to 
+    being actively engaged in the classroom},
+  author={Deslauriers, Louis and McCarty, Logan S and Miller, Kelly and 
+    Callaghan, Kristina and Kestin, Greg},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={116},
+  number={39},
+  pages={19251--19257},
+  year={2019},
+  publisher={National Acad Sciences}
+}
+@ And the URL to the publisher's page for the article:
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=MeasuringActualOrFeelingOfLearning
+URL-MeasuringActualOrFeelingOfLearning=https://www.pnas.org/content/116/39/19251.short
+@
+
+\Textcite{DevelopmentResearch} writes in their abstract:
+\blockcquote{DevelopmentResearch}{%
+  This chapter discusses the role of research in relation to educational design 
+  and development activities. The first part of the chapter focuses on the 
+  rationale and basic principles of development research by outlining motives 
+  for conducting formative research, analyzing definitions and aims of various 
+    types of development research, and discussing several of its key 
+    characteristics. The second part of the chapter deals with methods of 
+    development research, exploring some of its typical problems and dilemmas, 
+    and discussing several challenges for further action and reflection.%
+}
+
+The bibliographic entry:
+<<bibedu.bib>>=
+@Inbook{DevelopmentResearch,
+  author="van den Akker, Jan",
+  editor="van den Akker, Jan
+      and Branch, Robert Maribe
+      and Gustafson, Kent
+      and Nieveen, Nienke
+      and Plomp, Tjeerd",
+  title="Principles and Methods of Development Research",
+  bookTitle="Design Approaches and Tools in Education and Training",
+  year="1999",
+  publisher="Springer Netherlands",
+  address="Dordrecht",
+  pages="1--14",
+  isbn="978-94-011-4255-7",
+  doi="10.1007/978-94-011-4255-7_1",
+}
+@ And the URL:
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=DevelopmentResearch
+URL-DevelopmentResearch=https://doi.org/10.1007/978-94-011-4255-7_1
+@
+
+\Textcite{ActionResearch} describes action research as \blockcquote{%
+  Action research aims to facilitate insight, develop a teaching practice that 
+  is reactive and reflective, positively impact the school community and the 
+  educational environment, as well as help students be better learners%
+}.
+It works by iterating cycles of action~\cite{ActionResearch}:
+\begin{description}
+\item[Planning]
+Identify problem, formulate research questions, \etc
+
+\item[Action/implementation]
+Use the implementation, perform the action.
+
+\item[Observation/evaluation]
+Observe the outcomes, evaluate the action.
+
+\item[Critical reflection]
+Reflect on the evaluation and the whole action.
+Identify a new problem and start the process from the beginning again.
+\end{description}
+
+The bibliographic entry:
+<<bibedu.bib>>=
+@Inbook{ActionResearch,
+  author="Gogus, Aytac",
+  editor="Seel, Norbert M.",
+  title="Action Research on Learning",
+  bookTitle="Encyclopedia of the Sciences of Learning",
+  year="2012",
+  publisher="Springer US",
+  address="Boston, MA",
+  pages="69--72",
+  isbn="978-1-4419-1428-6",
+  doi="10.1007/978-1-4419-1428-6_488",
+}
+@ And the URL:
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=ActionResearch
+URL-ActionResearch=https://doi.org/10.1007/978-1-4419-1428-6_488
+@
+
+\Textcite{DesignBasedResearch} gives a short introduction to design-based 
+research and its progress.
+They write in the abstract:
+\blockcquote{DesignBasedResearch}{%
+  Design-based research (DBR) evolved near the beginning of the 21st century 
+  and was heralded as a practical research methodology that could effectively 
+  bridge the chasm between research and practice in formal education. In this 
+  article, the authors review the characteristics of DBR and analyze the five 
+  most cited DBR articles from each year of this past decade. They illustrate 
+  the context, publications, and most popular interventions utilized. They 
+  conclude that interest in DBR is increasing and that results provide limited 
+  evidence for guarded optimism that the methodology is meeting its promised 
+  benefits.%
+}
+
+The bibliography entry:
+<<bibedu.bib>>=
+@article{DesignBasedResearch,
+  author = {Terry Anderson and Julie Shattuck},
+  title = {Design-Based Research: A Decade of Progress in Education Research?},
+  journal = {Educational Researcher},
+  volume = {41},
+  number = {1},
+  pages = {16-25},
+  year = {2012},
+  doi = {10.3102/0013189X11428813},
+}
+@ And the URL:
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=DesignBasedResearch
+URL-DesignBasedResearch=https://doi.org/10.3102/0013189X11428813
+@
 
 
 \printbibliography
