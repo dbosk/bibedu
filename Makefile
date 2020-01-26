@@ -10,7 +10,6 @@ NOWEB_SUFFIXES+= .bib
 all: bibedu.pdf
 
 bibedu.pdf: bibedu.tex bibedu.sty bibedu.bib
-bibedu.pdf: necessary-conditions.tex
 
 
 .PHONY: clean
