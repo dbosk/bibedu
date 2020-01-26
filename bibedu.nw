@@ -107,6 +107,26 @@ $(foreach ref,${BIBEDU_REFKEY},$(eval $(call bibedu_display,${ref})))
 @
 
 
+\chapter{Standard terminology and acronyms}
+
+We have the \ac{VLE} and \ac{LMS} acronyms which are indispensable in the 
+modern education landscape.
+<<bibedu.sty>>=
+\DeclareAcronym{VLE}{
+  short = VLE,
+  long = virtual learning environment,
+  foreign = learning management system,
+  foreign-lang = english,
+}
+\DeclareAcronym{LMS}{
+  short = LMS,
+  long = learning management system,
+  foreign = virtual learning environment,
+  foreign-lang = british,
+}
+@
+
+
 \chapter{Learning theory}
 
 \Textcite{Vygotsky} developed the socio-cultural theory.
