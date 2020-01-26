@@ -483,8 +483,8 @@ BIBEDU_REFKEY+=ActionResearch
 URL-ActionResearch=https://doi.org/10.1007/978-1-4419-1428-6_488
 @
 
-\Textcite{DesignBasedResearch} gives a short introduction to design-based 
-research and its progress.
+\Textcite{DesignBasedResearch} gives a short introduction to \ac{DBR} and its 
+progress.
 They write in the abstract:
 \blockcquote{DesignBasedResearch}{%
   Design-based research (DBR) evolved near the beginning of the 21st century 
@@ -498,7 +498,14 @@ They write in the abstract:
   benefits.%
 }
 
-The bibliography entry:
+The acronym:
+<<bibedu.sty>>=
+\DeclareAcronym{DBR}{%
+  short = DBR,
+  long = design-based research,
+  cite = DesignBasedResearch,
+}
+@ The bibliography entry:
 <<bibedu.bib>>=
 @article{DesignBasedResearch,
   author = {Terry Anderson and Julie Shattuck},
