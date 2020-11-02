@@ -2,6 +2,16 @@ bibedu.pdf
 bibedu.tex
 ltxobj/
 
+assessment.bib
+assessment.mk
+assessment.sty
+didactics.bib
+didactics.mk
+didactics.sty
+learning.bib
+learning.mk
+learning.sty
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
