@@ -57,7 +57,9 @@ it also automatically includes the bibliography for use with BibLaTeX.
 \ProvidesPackage{bibedu}[2019/08/18 v0.2 Bibliography and Library for Education]
 \RequirePackage{biblatex}
 \addbibresource{bibedu.bib}
-\RequirePackage{acrox}
+\RequirePackage{acro}
+\acsetup{load-style=adx}
+\acsetup{load-style=possessive}
 @ Now we can add acronyms and other code by adding it to [[<<bibedu.sty>>]].
 <<bibedu.sty>>=
 \DeclareAcronym{CS}{
