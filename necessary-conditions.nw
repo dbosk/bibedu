@@ -123,3 +123,34 @@ Learning study was first introduced in Marton's keynote from 2001.
   location = {Hong Kong},
 }
 @
+
+Marton also introduced deep and surface learning together with 
+Säljö~\cite{DeepSurfaceLearning}.
+<<bibedu.bib>>=
+@article{DeepSurfaceLearning,
+  title={On qualitative differences in learning: I—Outcome and process},
+  author={Marton, Ference and S{\"a}lj{\"o}, Roger},
+  journal={British journal of educational psychology},
+  volume={46},
+  number={1},
+  pages={4--11},
+  year={1976},
+  publisher={Wiley Online Library}
+}
+@ The abstract of which is:
+\blockcquote{DeepSurfaceLearning}{%
+  This paper describes an attempt to identify different levels of processing of 
+  information among groups of Swedish university students who were asked to 
+  read substantial passages of prose. Students were asked questions about the 
+  meaning of the passages and also about how they set about reading the 
+  passages. This approach allows processes and strategies of learning to be 
+  examined, as well as the outcomes in terms of what is understood and 
+  remembered. The starting point of this research was that learning has to be 
+  described in terms of its content. From this point differences in what is 
+  learned, rather than differences in how much is learned, are described. It 
+  was found that in each study a number of categories (levels of outcome) 
+  containing basically different conceptions of the content of the learning 
+  task could be identified. The corresponding differences in level of 
+  processing are described in terms of whether the learner is engaged in 
+  \emph{surface‐level or deep‐level processing}.%
+}
