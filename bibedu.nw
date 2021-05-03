@@ -251,6 +251,25 @@ BIBEDU_REFKEY+=Moura2011teachingCS
 URL-Moura2011teachingCS=http://www.sciencedirect.com/science/article/pii/S0360131510002617
 @
 
+\Textcite{RigorousMathematicalThinking} demonstrates how to foster rigorous 
+mathematical thinking.
+<<bibedu.bib>>=
+@book{RigorousMathematicalThinking,
+  author={Kinard, James T. and Kozulin, Alex.},
+  title={Rigorous mathematical thinking: conceptual formation in the 
+    mathematics classroom},
+  publisher={Cambridge University Press},
+  address={Cambridge},
+  year={2008},
+  keywords={Matematiskt t{\"a}nkande Matematik -- psykologiska aspekter 
+  Matematikundervisning},
+}
+@
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=RigorousMathematicalThinking
+URL-RigorousMathematicalThinking=https://libris.kb.se/bib/12688790
+@
+
 
 \chapter{Assessment}
 
