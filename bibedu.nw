@@ -268,7 +268,31 @@ mathematical thinking.
 <<bibedu.mk>>=
 BIBEDU_REFKEY+=RigorousMathematicalThinking
 URL-RigorousMathematicalThinking=https://libris.kb.se/bib/12688790
+@ It gives an interesting quote \parentext{citing \cite{Verschaffel1999}}:
+\blockcquote[p.~1, my emphasis]{RigorousMathematicalThinking}{%
+  \enquote{There are 26 sheep and 10 goats on a ship.
+    How old is the ship's captain?}
+  This and similar questions were given during the math lessons to primary 
+  school students in a number of European countries.
+  \emph{More than 60\% of students attempted to solve the problem by combining 
+  the given numbers}%
+}.
+<<bibedu.bib>>=
+@article{Verschaffel1999,
+  title={Realistic mathematical modelling and problem solving in the upper 
+    elementary school: Analysis and improvement},
+  author={Verschaffel, Lieven},
+  journal={Teaching and learning thinking skills. Contexts of learning},
+  pages={215--240},
+  year={1999},
+  publisher={Swets \& Zeitlinger Lisse}
+}
 @
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=Verschaffel1999
+URL-Verschaffel1999=https://publicatio.bibl.u-szeged.hu/11927/1/CsBeno_Teaching_1999.pdf#page=216
+@
+
 
 
 \chapter{Assessment}
