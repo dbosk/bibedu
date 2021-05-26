@@ -30,6 +30,8 @@ BIBEDU_REFKEY+=Moura2011teachingCS
 URL-Moura2011teachingCS=http://www.sciencedirect.com/science/article/pii/S0360131510002617
 BIBEDU_REFKEY+=RigorousMathematicalThinking
 URL-RigorousMathematicalThinking=https://libris.kb.se/bib/12688790
+BIBEDU_REFKEY+=Verschaffel1999
+URL-Verschaffel1999=https://publicatio.bibl.u-szeged.hu/11927/1/CsBeno_Teaching_1999.pdf#page=216
 BIBEDU_REFKEY+=BiggsTeachingForQualityLearning
 URL-BiggsTeachingForQualityLearning=https://www.umweltbildung-noe.at/upload/files/OEKOLOG%202014/2_49657968-Teaching-for-Quality-Learning-at-University.pdf
 BIBEDU_REFKEY+=DisciplineAndPunish
