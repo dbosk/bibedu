@@ -2,7 +2,27 @@
 \ProvidesPackage{bibedu}[2019/08/18 v0.2 Bibliography and Library for Education]
 \RequirePackage{biblatex}
 \addbibresource{bibedu.bib}
-\RequirePackage{acro}
+\RequirePackage{acrox}
+\DeclareAcronym{CS}{
+  short = {CS},
+  long = {computer science},
+}
+\DeclareAcronym{CSE}{
+  short = {CSE},
+  long = {\acifused{CS}{\acs*{CS}}{\acl*{CS}} education}
+}
+\DeclareAcronym{VLE}{
+  short = VLE,
+  long = virtual learning environment,
+  foreign = learning management system,
+  foreign-lang = english,
+}
+\DeclareAcronym{LMS}{
+  short = LMS,
+  long = learning management system,
+  foreign = virtual learning environment,
+  foreign-lang = british,
+}
 \DeclareAcronym{ZPD}{%
   short = {ZPD},
   long = {zone of proximal development},
@@ -13,4 +33,17 @@
   short-indefinite = {an},
   long = {intended learning outcome},
   long-indefinite = {an},
+}
+\DeclareAcronym{DBR}{%
+  short = DBR,
+  long = design-based research,
+  cite = DesignBasedResearch,
+}
+\DeclareAcronym{LA}{%
+  short = LA,
+  long = learning analytics,
+}
+\DeclareAcronym{TEL}{%
+  short = TEL,
+  long = technology-enhanced learning,
 }
