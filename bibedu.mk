@@ -54,3 +54,11 @@ BIBEDU_REFKEY+=ActionResearch
 URL-ActionResearch=https://doi.org/10.1007/978-1-4419-1428-6_488
 BIBEDU_REFKEY+=DesignBasedResearch
 URL-DesignBasedResearch=https://doi.org/10.3102/0013189X11428813
+BIBEDU_REFKEY+=NecessaryConditionsOfLearning
+URL=NecessaryConditionsOfLearning=http://libris.kb.se/bib/16950937
+BIBEDU_REFKEY+=phenomenography
+URL-phenomenography=https://link.springer.com/article/10.1007%2FBF00132516
+BIBEDU_REFKEY+=VariationTheory
+URL-VariationTheory=https://www.tandfonline.com/doi/abs/10.1080/07294360020021455
+BIBEDU_REFKEY+= VariationTheoryInProgramming
+URL-VariationTheoryInProgramming=https://www.tandfonline.com/doi/abs/10.1080/03043790902989374
