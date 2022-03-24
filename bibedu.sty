@@ -2,7 +2,9 @@
 \ProvidesPackage{bibedu}[2019/08/18 v0.2 Bibliography and Library for Education]
 \RequirePackage{biblatex}
 \addbibresource{bibedu.bib}
-\RequirePackage{acrox}
+\RequirePackage{acro}
+\acsetup{load-style=adx}
+\acsetup{load-style=possessive}
 \DeclareAcronym{CS}{
   short = {CS},
   long = {computer science},
@@ -15,13 +17,11 @@
   short = VLE,
   long = virtual learning environment,
   foreign = learning management system,
-  foreign-lang = english,
 }
 \DeclareAcronym{LMS}{
   short = LMS,
   long = learning management system,
   foreign = virtual learning environment,
-  foreign-lang = british,
 }
 \DeclareAcronym{ZPD}{%
   short = {ZPD},
