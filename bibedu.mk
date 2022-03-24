@@ -4,7 +4,7 @@ BIBEDU_FILES+=bibedu.sty
 INCLUDE_BIBEDU?=.
 
 ${BIBEDU_FILES}:
-	[ -e "./$@" ] || ln -s ${INCLUDE_BIBEDU}/$@ ./$@
+	[ -e "./$@" ] || ln -sf ${INCLUDE_BIBEDU}/$@ ./$@
 
 bibedu.sty: bibedu.bib
 .PHONY: clean-depends distclean
