@@ -129,13 +129,11 @@ modern education landscape.
   short = VLE,
   long = virtual learning environment,
   foreign = learning management system,
-  foreign-lang = english,
 }
 \DeclareAcronym{LMS}{
   short = LMS,
   long = learning management system,
   foreign = virtual learning environment,
-  foreign-lang = british,
 }
 @
 
