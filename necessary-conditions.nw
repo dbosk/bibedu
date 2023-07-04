@@ -1,0 +1,177 @@
+\section{Necessary conditions of learning}
+
+\Textcite{NecessaryConditionsOfLearning} summarizes the theory culminating from 
+his life's work in \citetitle{NecessaryConditionsOfLearning}.
+<<bibedu.bib>>=
+@book{NecessaryConditionsOfLearning,
+  author={Marton, Ference},
+  title={Necessary conditions of learning},
+  publisher={Routledge},
+  address={London},
+  year={2015},
+  ISBN={9780415739139},
+  keywords={Fenomenologisk psykologi Inl{\"a}rning -- psykologiska aspekter},
+}
+@
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=NecessaryConditionsOfLearning
+URL=NecessaryConditionsOfLearning=http://libris.kb.se/bib/16950937
+@
+
+The key ideas are
+\begin{itemize}
+\item phenomenography~\cite{Phenomenography},
+\item variation theory~\cite{VariationTheory},
+\item learning studies.
+\end{itemize}
+
+The references follow.
+<<bibedu.bib>>=
+@article{Phenomenography,
+  title = {Phenomenography --- {Describing} conceptions of the world around 
+    us},
+  volume = {10},
+  issn = {0020-4277, 1573-1952},
+  shorttitle = {Phenomenography},
+  doi = {10.1007/BF00132516},
+  language = {en},
+  number = {2},
+  urldate = {2021-03-30},
+  journal = {Instructional Science},
+  author = {Marton, Ference},
+  month = 7,
+  year = {1981},
+  pages = {177--200},
+}
+@
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=phenomenography
+URL-phenomenography=https://link.springer.com/article/10.1007%2FBF00132516
+@ The abstract reads:
+\blockcquote{Phenomenography}{%
+Arguments are put forward in this paper in favour of research which has as its 
+aim the finding and systematizing of forms of thought in terms of which people 
+interpret significant aspects of reality. The kind of research argued for is 
+complementary to other kinds of research; it aims at description, analysis and 
+understanding of experiences. The relatively distinct field of inquiry 
+indicated by such an orientation is labelled phenomenography.
+
+A fundamental distinction is made between two perspectives. From the 
+first-order perspective we aim at describing various aspects of the world and 
+from the second-order perspective (for which a case is made in this paper) we 
+aim at describing people's experience of various aspects of the world.
+
+Research in a variety of disciplines, sub-disciplines and “schools of thought” 
+has provided us with experiential descriptions, that is, content-oriented and 
+interpretative descriptions of the qualitatively different ways in which people 
+perceive and understand their reality. It has, however, seldom been recognized 
+that these various research efforts share a common perspective in their view of 
+phenomena and a unifying scientific identity has in consequence not been 
+attained. The focussing on the apprehended (experienced, conceptualized,) 
+content as a point of departure for carrying out research and as a basis for 
+integrating the findings is seen as the most distinctive feature of the domain 
+indicated.
+
+Conceptions and ways of understanding are not seen as individual qualities. 
+Conceptions of reality are considered rather as categories of description to be 
+used in facilitating the grasp of concrete cases of human functioning. Since 
+the same categories of description appear in different situations, the set of 
+categories is thus stable and generalizable between the situations even if 
+individuals move from one category to another on different occasions. The 
+totality of such categories of description denotes a kind of collective 
+intellect, an evolutionary tool in continual development.%
+}
+
+Variation theory is discussed in the following article.
+<<bibedu.bib>>=
+@article{VariationTheory,
+  author = {Ference Marton  and  Keith Trigwell},
+  title = {Variatio Est Mater Studiorum},
+  journal = {Higher Education Research \& Development},
+  volume = {19},
+  number = {3},
+  pages = {381-395},
+  year  = {2000},
+  publisher = {Routledge},
+  doi = {10.1080/07294360020021455},
+}
+@
+<<bibedu.mk>>=
+BIBEDU_REFKEY+=VariationTheory
+URL-VariationTheory=https://www.tandfonline.com/doi/abs/10.1080/07294360020021455
+@ The abstract reads:
+\blockcquote{VariationTheory}{%
+  There is no learning without discernment. And there is no discernment without 
+  variation. If good teaching is about making learning possible, how do good 
+  teachers help students experience variation? In this paper, we argue that 
+  they constitute a space of learning which contains those aspects of the 
+  object of learning that are subject to variation simultaneously. For learning 
+  to occur, whether it be in the formal learning contexts established by these 
+  teachers, or in the less formal contexts of participation in social 
+  practices, there must necessarily be a certain pattern of variation present 
+  to experience, and this pattern must be experienced.%
+}
+
+Learning study was first introduced in Marton's keynote from 2001.
+<<bibedu.bib>>=
+@unpublished{LearningStudy,
+  author = {Ference Marton},
+  title = {The Learning Study},
+  year = {2001},
+  note = {Keynote address delivered at the Hong Kong Subsidized Secondary 
+  School Council 30th Anniversary Education Conference},
+  location = {Hong Kong},
+}
+@
+
+Marton also introduced deep and surface learning together with 
+Säljö~\cite{DeepSurfaceLearning}.
+<<bibedu.bib>>=
+@article{DeepSurfaceLearning,
+  title={On qualitative differences in learning: I—Outcome and process},
+  author={Marton, Ference and S{\"a}lj{\"o}, Roger},
+  journal={British journal of educational psychology},
+  volume={46},
+  number={1},
+  pages={4--11},
+  year={1976},
+  publisher={Wiley Online Library}
+}
+@ The abstract of which is:
+\blockcquote{DeepSurfaceLearning}{%
+  This paper describes an attempt to identify different levels of processing of 
+  information among groups of Swedish university students who were asked to 
+  read substantial passages of prose. Students were asked questions about the 
+  meaning of the passages and also about how they set about reading the 
+  passages. This approach allows processes and strategies of learning to be 
+  examined, as well as the outcomes in terms of what is understood and 
+  remembered. The starting point of this research was that learning has to be 
+  described in terms of its content. From this point differences in what is 
+  learned, rather than differences in how much is learned, are described. It 
+  was found that in each study a number of categories (levels of outcome) 
+  containing basically different conceptions of the content of the learning 
+  task could be identified. The corresponding differences in level of 
+  processing are described in terms of whether the learner is engaged in 
+  \emph{surface‐level or deep‐level processing}.%
+}
+
+\Textcite{VariationTheoryInProgramming} applied variation theory to 
+programming.
+<<bibedu.bib>>=
+@article{VariationTheoryInProgramming,
+  author = {Michael Thuné and Anna Eckerdal},
+  title = {Variation theory applied to students’ conceptions of computer 
+  programming},
+  journal = {European Journal of Engineering Education},
+  volume = {34},
+  number = {4},
+  pages = {339-347},
+  year  = {2009},
+  publisher = {Taylor & Francis},
+  doi = {10.1080/03043790902989374},
+}
+@
+<<bibedu.mk>>=
+BIBEDU_REFKEY+= VariationTheoryInProgramming
+URL-VariationTheoryInProgramming=https://www.tandfonline.com/doi/abs/10.1080/03043790902989374
+@
